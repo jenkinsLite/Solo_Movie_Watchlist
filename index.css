@@ -52,6 +52,11 @@ input {
     padding: 1.2em 0;
     border: 1px solid lightgrey;
     border-radius: 6px 0 0 6px;
+    text-decoration: none;
+}
+
+input:-internal-autofill-selected {
+    background-color: white;
 }
 
 button {
@@ -62,21 +67,28 @@ button {
     border-radius: 0 6px 6px 0;
 }
 
-main {
-    height: 100%;
+main, .explore {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-main>p {
+main {
+    height: 100%;
+    margin-top: 4em;
+}
+
+.explore {
+    margin-top: 10em;
+}
+
+.explore>p {
     font-size: 2em;
     font-weight: 700;
     color: #DFDDDD;
 }
 
-main>img {
+.explore>img {
     width: 100px;
     height: 100px;
 }
@@ -102,4 +114,97 @@ main>img {
 #index-link>img {
     width: 22px; 
     height: 22px; 
+}
+
+.result-container, .info,
+.title-rating, .runtime-genre-add,
+#add-btn {
+    display: flex;
+}
+
+.poster {
+    height: 15em; 
+    max-width: calc(height / 7 * 5); 
+}
+
+.info {
+    flex-direction: column;
+    margin: auto 0 auto 2em;
+    width: 500px;
+    height: 100%;
+}
+
+.title-rating {
+    align-items: center;
+}
+
+.title, .rating {
+    margin: 0;
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.title-rating>img {
+    width: 16px; 
+    height: 16px; 
+    margin-left: 1.5em;
+}
+
+.rating, .runtime, .genre,
+.add {
+    color: #111827;
+}
+
+.rating {
+    margin-left: 0.5em;
+}
+
+.runtime, .genre {
+    margin-right: 1em;
+}
+
+.runtime-genre-add, .description {
+    margin-top: 1em;
+}
+
+.runtime-genre-add p, .description>p {
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+
+#add-btn>img {
+    width: 16px; 
+    height: 16px; 
+    margin-right: 0.3em;
+}
+
+.description {
+    color: #6B7280;
+    max-height: 140px;
+    overflow: hidden;
+    position: relative;
+}
+
+.description.expanded {
+    max-height: none;
+    overflow: visible;
+}
+
+.read-more-btn {
+    display: none;
+    font-size: 0.9em;
+    padding: 0 0.2em;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+}
+
+.no-results {
+    /* display: none; */
 }
