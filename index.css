@@ -91,12 +91,12 @@ main>img {
 }
 
 #index-link {
-    display: flex;
+    display: flex;;
     align-items: center;
 }
 
 #index-link>p {
-    margin-left: 6px;
+    margin: 0 0 0 6px;
 }
 
 #index-link>img {
