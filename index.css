@@ -1,4 +1,105 @@
 html, body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    width: 1200px;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/header-bg-img.png");
+    background-size: cover;
+    height: 15vw;
+    background-blend-mode: color black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4em;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+nav>a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.7em;
+}
+
+nav>a:link, nav>a:visited, nav>a:hover, nav>a:active {
+  text-decoration: none;
+  color: white;
+}
+
+search {
+    width: 749px;
+    margin: -24px auto 0;
+}
+
+.icon-placeholder {
+    background-image: url("images/mag-icon.png");
+    background-size: 16px 16px; 
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    padding-left: 30px;
+    height: 30px;
+}
+
+input {
+    width: 600px;
+    font-size: 1.2em;
+    padding: 1.2em 0;
+    border: 1px solid lightgrey;
+    border-radius: 6px 0 0 6px;
+}
+
+button {
+    font-size: 1em;
+    padding: 0.95em 3em 0.8em;
+    margin-left: -4px;
+    border: 1px solid lightgrey;
+    border-radius: 0 6px 6px 0;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main>p {
+    font-size: 2em;
+    font-weight: 700;
+    color: #DFDDDD;
+}
+
+main>img {
+    width: 100px;
+    height: 100px;
+}
+
+.index-link {
+    display: inline-block;
+    color: #363636;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 5px;
+}
+
+#index-link {
+    display: flex;
+    align-items: center;
+}
+
+#index-link>p {
+    margin-left: 6px;
+}
+
+#index-link>img {
+    width: 22px; 
+    height: 22px; 
 }
