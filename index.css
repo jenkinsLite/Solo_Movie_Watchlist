@@ -78,11 +78,13 @@ main {
     margin-top: 4em;
 }
 
-.explore {
+.explore, .no-results {
+    text-align: center;
     margin-top: 10em;
 }
 
-.explore>p {
+.explore>p, .no-results>p {
+    text-align: center;
     font-size: 2em;
     font-weight: 700;
     color: #DFDDDD;
@@ -120,6 +122,12 @@ main {
 .title-rating, .runtime-genre-add,
 #add-btn {
     display: flex;
+}
+
+main>.result-container:not(:last-child) {
+    padding-bottom: 3em;
+    margin-bottom: 3em;
+    border-bottom: 1.5px solid #E5E7EB;
 }
 
 .poster {
@@ -175,6 +183,10 @@ main {
     margin-bottom: 0; 
 }
 
+#add-btn {
+    cursor: pointer;
+}
+
 #add-btn>img {
     width: 16px; 
     height: 16px; 
@@ -194,6 +206,7 @@ main {
 }
 
 .read-more-btn {
+    color: #272727;
     display: none;
     font-size: 0.9em;
     padding: 0 0.2em;
@@ -201,10 +214,6 @@ main {
     border: none;
     cursor: pointer;
     position: absolute; 
-    bottom: 0;
+    bottom: -2.5;
     right: 0;
-}
-
-.no-results {
-    /* display: none; */
 }
