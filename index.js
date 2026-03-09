@@ -3,6 +3,7 @@ const URL = "https://www.omdbapi.com/?apikey=8478e312&"
 const searchBtn = document.querySelector("#search-btn")
 const search = document.querySelector("#search")
 const main = document.querySelector("main")
+const resultContainer = document.querySelector(".result-container")
 const explore = document.querySelector(".explore")
 const noResults = document.querySelector(".no-results")
 
@@ -15,9 +16,11 @@ searchBtn.addEventListener("click", async () => {
     if (data.Response === "False") {
         noResults.style.display = "inline-block" 
         noResults.innerHTML = "<p>Unable to find what you’re looking for.<br>Please try another search.</p>"
+        resultContainer.style.display = "none"
     } else {
         noResults.style.display = "none"
-        main.innerHTML = getResults(data)
+        resultContainer.style.display = "flex"
+        resultContainer.innerHTML = getResults(data)
         main.querySelectorAll(".description").forEach(description => {
             toggleReadMoreButton(description)
             handleReadMoreToggle(description)
@@ -76,27 +79,25 @@ function handleReadMoreToggle(description) {
 
 function getResults(data) {
 
-    return ` <div class="result-container">
-        <img src="${data.Poster}" class="poster"></img>
-        <div class="info">
-            <div class="title-rating">
-                <p class="title">${data.Title}</p>
-                <img src="images/star-icon.png" alt="star icon">
-                <p class="rating">${data.imdbRating}</p>
-            </div>
-            <div class="runtime-genre-add">
-                <p class="runtime">${data.Runtime}</p>
-                <p class="genre">${data.Genre}</p>
-                <div id="add-btn">
-                    <img src="images/plus-icon.png" alt="plus icon">
-                    <p class="add">Watchlist</p>
+    return `<img src="${data.Poster}" class="poster"></img>
+            <div class="info">
+                <div class="title-rating">
+                    <p class="title">${data.Title}</p>
+                    <img src="images/star-icon.png" alt="star icon">
+                    <p class="rating">${data.imdbRating}</p>
+                </div>
+                <div class="runtime-genre-add">
+                    <p class="runtime">${data.Runtime}</p>
+                    <p class="genre">${data.Genre}</p>
+                    <div id="add-btn">
+                        <img src="images/plus-icon.png" alt="plus icon">
+                        <p class="add">Watchlist</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>${data.Plot}</p>
+                    <button class="read-more-btn">... Read more</button>
                 </div>
             </div>
-            <div class="description">
-                <p>${data.Plot}</p>
-                <button class="read-more-btn">... Read more</button>
-            </div>
-        </div>
-    </div>
-    `
+            `
 }
