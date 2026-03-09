@@ -5,7 +5,7 @@ html, body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/header-bg-img.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/header-bg-img.png");
     background-size: cover;
     height: 15vw;
     background-blend-mode: color black;
@@ -38,7 +38,7 @@ search {
 }
 
 .icon-placeholder {
-    background-image: url("images/mag-icon.png");
+    background-image: url("../images/mag-icon.png");
     background-size: 16px 16px; 
     background-repeat: no-repeat;
     background-position: 8px center;
@@ -118,20 +118,21 @@ main {
     height: 22px; 
 }
 
-.result-container, .info,
+.result-container, .result, .info,
 .title-rating, .runtime-genre-add,
-#add-btn {
+.runtime-genre-remove, .add-btn, .remove-btn {
     display: flex;
 }
 
-main>.result-container:not(:last-child) {
+.result {
     padding-bottom: 3em;
     margin-bottom: 3em;
     border-bottom: 1.5px solid #E5E7EB;
 }
 
 .poster {
-    height: 15em; 
+    /* height: 15rem;  */
+    height: 200px;
     max-width: calc(height / 7 * 5); 
 }
 
@@ -174,20 +175,20 @@ main>.result-container:not(:last-child) {
     margin-right: 1em;
 }
 
-.runtime-genre-add, .description {
+.runtime-genre-add, .runtime-genre-remove, .description {
     margin-top: 1em;
 }
 
-.runtime-genre-add p, .description>p {
+.runtime-genre-add p, .runtime-genre-remove p, .description>p {
     margin-top: 0; 
     margin-bottom: 0; 
 }
 
-#add-btn {
+.add-btn, .remove-btn {
     cursor: pointer;
 }
 
-#add-btn>img {
+.add-btn>img, .remove-btn>img {
     width: 16px; 
     height: 16px; 
     margin-right: 0.3em;

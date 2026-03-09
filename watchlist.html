@@ -3,7 +3,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <header>
@@ -11,6 +11,7 @@
             <nav><a href="index.html">Search for movies</a></nav>
         </header>
         <main>
+            <div class="result-container"></div>
             <div class="no-results">
                 <p>Your watchlist is looking a little empty...</p>
                 <a href="index.html" class="index-link"><div id="index-link">
@@ -19,6 +20,6 @@
                 </div></a>
             </div>
         </main>
-        <script src="index.js"></script>
+        <script type="module" src="js/watchlist.js"></script>
     </body>
 </html>
