@@ -1,5 +1,5 @@
 import { URL, toggleReadMoreButton, handleReadMoreToggle,
-         main, resultContainer, noResults } from '/js/utils.js'
+         main, resultContainer, noResults, watchlist } from '/js/utils.js'
 
 const searchBtn = document.querySelector("#search-btn")
 const search = document.querySelector("#search")
@@ -25,7 +25,6 @@ searchBtn.addEventListener("click", async () => {
         })
 
         document.querySelector(".add-btn").addEventListener("click", () => {
-            const watchlist = JSON.parse(localStorage.getItem("watchlist"))
 
             if (!watchlist) {
                 localStorage.setItem("watchlist", `["${data.Title}"]`)

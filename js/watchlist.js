@@ -1,7 +1,5 @@
 import { URL, toggleReadMoreButton, handleReadMoreToggle,
-         main, resultContainer, noResults } from '/js/utils.js'
-
-export const watchlist = JSON.parse(localStorage.getItem("watchlist"))
+         main, resultContainer, noResults, watchlist } from '/js/utils.js'
 
 if (watchlist) {
 
