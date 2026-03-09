@@ -1,5 +1,5 @@
 import { URL, toggleReadMoreButton, handleReadMoreToggle,
-         main, resultContainer, noResults, watchlist } from '/js/utils.js'
+         main, resultContainer, noResults, watchlist } from './utils.js'
 
 if (watchlist) {
 

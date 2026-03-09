@@ -1,5 +1,5 @@
 import { URL, toggleReadMoreButton, handleReadMoreToggle,
-         main, resultContainer, noResults, watchlist } from '/js/utils.js'
+         main, resultContainer, noResults, watchlist } from './utils.js'
 
 const searchBtn = document.querySelector("#search-btn")
 const search = document.querySelector("#search")
