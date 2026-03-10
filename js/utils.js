@@ -3,7 +3,10 @@ export const URL = "https://www.omdbapi.com/?apikey=8478e312&"
 export const main = document.querySelector("main")
 export const resultContainer = document.querySelector(".result-container")
 export const noResults = document.querySelector(".no-results")
-export const watchlist = JSON.parse(localStorage.getItem("watchlist"))
+
+export function getWatchlist() {
+    return JSON.parse(localStorage.getItem("watchlist"))
+}
 
 export function toggleReadMoreButton(description) {
 

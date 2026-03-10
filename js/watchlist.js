@@ -1,5 +1,7 @@
 import { URL, toggleReadMoreButton, handleReadMoreToggle,
-         main, resultContainer, noResults, watchlist } from './utils.js'
+         getWatchlist, main, resultContainer, noResults } from './utils.js'
+
+const watchlist = getWatchlist()
 
 if (watchlist) {
 

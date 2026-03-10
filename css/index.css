@@ -163,7 +163,7 @@ main {
 }
 
 .rating, .runtime, .genre,
-.add {
+.btn-text {
     color: #111827;
 }
 
